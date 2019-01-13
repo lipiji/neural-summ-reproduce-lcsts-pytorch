@@ -1,0 +1,7 @@
+*.pyc
+/*data/*
+/model*/*
+/tmp/*
+/result/*
+*.log
+/lcsts/*
