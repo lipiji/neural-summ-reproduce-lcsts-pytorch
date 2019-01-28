@@ -277,7 +277,7 @@ if __name__ == "__main__":
     args = parser.parse_args()
 
     data_type = "lcsts"
-    raw_path = "/home/pijili/data/summarization-data/SDS/lcsts_pj/"
+    raw_path = "/home/pijili/data/summarization-data/SDS/lcsts_pj/info/"
 
     print(data_type, raw_path)
     run(data_type, raw_path)

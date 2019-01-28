@@ -3,7 +3,7 @@ import sys
 import os
 from configs import * 
 
-cfg = BotConfigs()
+cfg = Configs()
 
 # config file for ROUGE
 ROUGE_PATH = cfg.cc.RESULT_PATH 

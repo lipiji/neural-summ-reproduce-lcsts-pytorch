@@ -1,5 +1,5 @@
 import os
-cudaid = 3
+cudaid = 4
 os.environ["CUDA_VISIBLE_DEVICES"] = str(cudaid)
 
 import sys
@@ -107,8 +107,8 @@ def init_modules():
     consts["lr"] = cfg.LR
     consts["beam_size"] = cfg.BEAM_SIZE
 
-    consts["max_epoch"] = 150 if options["is_debugging"] else 30 
-    consts["print_time"] = 5
+    consts["max_epoch"] = 150 if options["is_debugging"] else 50 
+    consts["print_time"] = 3
     consts["save_epoch"] = 1
 
     assert consts["dim_x"] == consts["dim_y"]
@@ -453,9 +453,9 @@ def predict(model, modules, consts, options):
 
     print("loading test set...")
     if options["model_selection"]:
-        xy_list = pickle.load(open(cfg.cc.VALIDATE_DATA_PATH + "pj3000.pkl", "rb")) 
+        xy_list = pickle.load(open(cfg.cc.VALIDATE_DATA_PATH + "pj.pkl", "rb")) 
     else:
-        xy_list = pickle.load(open(cfg.cc.TESTING_DATA_PATH + "pj3000.pkl", "rb")) 
+        xy_list = pickle.load(open(cfg.cc.TESTING_DATA_PATH + "test.pkl", "rb")) 
     batch_list, num_files, num_batches = datar.batched(len(xy_list), options, consts)
 
 

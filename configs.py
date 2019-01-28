@@ -35,8 +35,8 @@ class Configs():
 
     CELL = "gru" # gru or lstm
     CUDA = True
-    COPY = True
-    COVERAGE = True
+    COPY = False
+    COVERAGE = False
     BI_RNN = True
     BEAM_SEARCH = True
     BEAM_SIZE = 10
